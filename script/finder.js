@@ -15,7 +15,7 @@ function findschool(){
             (response) => response.json()
         )
         .then(
-            (data) => showlist(data.schoolInfo[1].row)
+            (data) => getlist(data.schoolInfo[1].row)
         );
 
     }else{
@@ -23,13 +23,28 @@ function findschool(){
     }
 }
 
-// Show School list
-function showlist(data){
-    data.forEach(element => {
-        console.log(element.SCHUL_NM);
-        console.log(element.ORG_RDNMA);
-        console.log(element.SD_SCHUL_CODE);
+// get school list
+function getlist(data){
+    data.forEach(i => {
+        showlist([i.SCHUL_NM, i.ORG_RDNMA, i.SD_SCHUL_CODE])
     });
+}
+
+// show school list
+function showlist(data){
+    const listbox = document.getElementById('schoollist');
+    let listchild = document.createElement('table')
+
+    listchild.innerHTML = `
+        <tr>
+            <td>${data[0]}</td>
+        </tr>
+        <tr>
+            <td>${data[1]}</td>
+        </tr>
+    `;
+    
+    listbox.appendChild(listchild);
 }
 
 // ErrorMessage
