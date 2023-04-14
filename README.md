@@ -8,6 +8,6 @@
 `API.js` 파일은 아래와 같이 작성합니다.
 ```js
 const secret = {
-	key: "발급 받은 나이스 OPEN API 키"
+    key: "발급 받은 나이스 OPEN API 키"
 }
 ```
