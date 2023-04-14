@@ -26,7 +26,9 @@ function findschool(){
 // Show School list
 function showlist(data){
     data.forEach(element => {
-        console.log(element);
+        console.log(element.SCHUL_NM);
+        console.log(element.ORG_RDNMA);
+        console.log(element.SD_SCHUL_CODE);
     });
 }
 
