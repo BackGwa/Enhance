@@ -1,10 +1,12 @@
 
-// Default value
+
+// Default value for API
 const APIKey = secret.key;
 const SCNM = '중학교';
 const ATPT = 'N10';
 
-// Find School
+
+// School Find API Request
 function findschool(){
     const schoolname = document.getElementById('schoolname').value;
     if(schoolname != ''){
@@ -23,14 +25,16 @@ function findschool(){
     }
 }
 
-// get school list
+
+// Listed schools found
 function getlist(data){
     data.forEach(i => {
         showlist([i.SCHUL_NM, i.ORG_RDNMA, i.SD_SCHUL_CODE])
     });
 }
 
-// show school list
+
+// Insert list in HTML
 function showlist(data){
     const listbox = document.getElementById('schoollist');
     let listchild = document.createElement('table')
@@ -50,16 +54,19 @@ function showlist(data){
     listbox.appendChild(listchild);
 }
 
-// ErrorMessage
+
+// Error message output
 function message(text){
     const msgbox = document.getElementById('message');
     msgbox.innerHTML = `${text}`;
 }
 
-// Send school info
+
+// Send selected school information
 function sendinfo(code){
     console.log(code);
 }
+
 
 // Register EventListener
 const search = document.getElementById('find');
