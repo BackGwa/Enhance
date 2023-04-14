@@ -42,6 +42,9 @@ function showlist(data){
         <tr>
             <td>${data[1]}</td>
         </tr>
+        <tr>
+            <button onclick="sendinfo(${data[2]})">선택하기</button>
+        </tr>
     `;
     
     listbox.appendChild(listchild);
@@ -53,6 +56,11 @@ function message(text){
     msgbox.innerHTML = `${text}`;
 }
 
+// Send school info
+function sendinfo(code){
+    console.log(code);
+}
+
 // Register EventListener
-const button = document.getElementById('find');
-button.addEventListener('click', findschool);
+const search = document.getElementById('find');
+search.addEventListener('click', findschool);
