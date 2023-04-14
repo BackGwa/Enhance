@@ -1,4 +1,5 @@
 
+// Default value
 const APIKey = secret.key;
 const SCNM = '중학교';
 const ATPT = 'N10';
@@ -14,7 +15,7 @@ function findschool(){
             (response) => response.json()
         )
         .then(
-            (data) => showlist(data)
+            (data) => showlist(data.schoolInfo[1].row)
         );
 
     }else{
@@ -24,7 +25,9 @@ function findschool(){
 
 // Show School list
 function showlist(data){
-    console.log(data);
+    data.forEach(element => {
+        console.log(element);
+    });
 }
 
 // ErrorMessage
