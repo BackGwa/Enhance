@@ -5,9 +5,9 @@
 ---
 
 해당 페이지를 정상적으로 이용하기 위해서는 스크립트 폴더 내에 `API.js` 파일이 있어야합니다.<br>
-`API.js` 파일은 아래와 같은 작성합니다.
+`API.js` 파일은 아래와 같이 작성합니다.
 ```js
 const secret = {
-	key: "NEIS OPEN API KEY"
+	key: "발급 받은 나이스 OPEN API 키"
 }
 ```
