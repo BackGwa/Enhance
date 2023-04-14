@@ -1,16 +1,14 @@
 
-
 // Default value for API
 const APIKey = secret.key;
 const SCNM = '중학교';
-const ATPT = 'N10';
 
 
 // School Find API Request
 function findschool(){
     const schoolname = document.getElementById('schoolname').value;
     if(schoolname != ''){
-        const APILink = `https://open.neis.go.kr/hub/schoolInfo?Type=json&KEY=${APIKey}&SCHUL_KND_SC_NM=${SCNM}&ATPT_OFCDC_SC_CODE=${ATPT}&SCHUL_NM=${schoolname}`;
+        const APILink = `https://open.neis.go.kr/hub/schoolInfo?Type=json&KEY=${APIKey}&SCHUL_KND_SC_NM=${SCNM}&SCHUL_NM=${schoolname}`;
 
         fetch(APILink)
         .then(
