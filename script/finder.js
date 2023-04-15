@@ -54,7 +54,7 @@ function showlist(data){
 
 // Send selected school information
 function sendinfo(code){
-    location.href=`./user.html?school=${code}`;
+    location.href=`./enhance.html?school=${code}`;
 }
 
 
