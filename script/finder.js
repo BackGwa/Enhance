@@ -7,7 +7,7 @@ const SCNM = '중학교';
 // School Find API Request
 function findschool(){
     const schoolname = document.getElementById('schoolname').value;
-    if(schoolname != ''){
+    if(!str.search(/\W|\s/g) > -1){
         const APILink = `https://open.neis.go.kr/hub/schoolInfo?Type=json&KEY=${APIKey}&SCHUL_KND_SC_NM=${SCNM}&SCHUL_NM=${schoolname}`;
 
         fetch(APILink)
@@ -17,8 +17,7 @@ function findschool(){
         .then(
             (data) => getlist(data.schoolInfo[1].row)
         );
-
-    } else message('학교 이름을 입력해주세요!');
+    }
 }
 
 
@@ -51,14 +50,6 @@ function showlist(data){
 }
 
 
-// Error message output
-function message(text){
-    const msgbox = document.getElementById('schoolname');
-    msgbox.placeholder = text;
-    
-}
-
-
 // Send selected school information
 function sendinfo(code){
     location.href=`./user.html?school=${code}`;
@@ -66,5 +57,5 @@ function sendinfo(code){
 
 
 // Register EventListener
-const search = document.getElementById('find');
-search.addEventListener('click', findschool);
+const search = document.getElementById('schoolname');
+search.addEventListener('input', findschool);
