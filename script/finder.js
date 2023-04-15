@@ -53,8 +53,9 @@ function showlist(data){
 
 // Error message output
 function message(text){
-    const msgbox = document.getElementById('message');
-    msgbox.innerHTML = `${text}`;
+    const msgbox = document.getElementById('schoolname');
+    msgbox.placeholder = text;
+    
 }
 
 
