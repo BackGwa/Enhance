@@ -18,9 +18,7 @@ function findschool(){
             (data) => getlist(data.schoolInfo[1].row)
         );
 
-    }else{
-        message('학교 이름을 입력해주세요!');
-    }
+    } else message('학교 이름을 입력해주세요!');
 }
 
 
@@ -62,7 +60,7 @@ function message(text){
 
 // Send selected school information
 function sendinfo(code){
-    console.log(code);
+    location.href=`./user.html?school=${code}`;
 }
 
 
