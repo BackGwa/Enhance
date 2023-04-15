@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,23 @@
 
     <script src="./script/API.js"></script>
     <link rel="stylesheet" href="./style/find.css">
+    <link rel="stylesheet" href="./style/font.css">
 </head>
+
 <body>
-    <input type="text" id="schoolname" placeholder="학교 이름">
-    <input type="button" value="찾기" id="find">
-    <div id="message"></div>
+    <div class="mainpage">
+        <div class="search fontP colorW">
+            <input type="text" id="schoolname" placeholder="학교 검색" class="w900 f48">
+            <input type="button" value="찾기" id="find">
+            <div id="message"></div>
+        </div>
 
-    <div id="schoollist" class="table">
+        <div id="schoollist" class="table">
 
+        </div>
     </div>
 
     <script src="./script/finder.js"></script>
 </body>
+
 </html>
