@@ -23,12 +23,12 @@ function findschool(){
 
 // Listed schools found
 function getlist(data){
-    if(data != NaN){
-        listbox.remove();
-        data.forEach(i => {
-            showlist([i.SCHUL_NM, i.ORG_RDNMA, i.SD_SCHUL_CODE])
-        });
+    while(listbox.firstChild) {
+        listbox.removeChild(listbox.firstChild);
     }
+    data.forEach(i => {
+        showlist([i.SCHUL_NM, i.ORG_RDNMA, i.SD_SCHUL_CODE])
+    });
 }
 
 
@@ -59,5 +59,5 @@ function sendinfo(code){
 
 
 // Register EventListener
-const search = document.getElementById('schoolname');
-search.addEventListener('input', findschool);
+const search = document.getElementById('find');
+search.addEventListener('click', findschool);
