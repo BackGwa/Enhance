@@ -32,7 +32,7 @@ body {
     box-sizing: border-box;
     outline: none;
     filter: drop-shadow(0px 0px 16px #7066ff00);
-    transition:.3s;
+    transition: .3s;
 }
 
 .inputbar:hover{
@@ -57,6 +57,12 @@ body {
     width: 42px;
     opacity: 0.5;
     cursor: pointer;
+    transition:.3s;
+}
+
+.svgset:hover {
+    width: 43px;
+    opacity: 0.75;
 }
 
 table {
