@@ -13,11 +13,12 @@ body {
 }
 
 .search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     min-height: 100vh;
 }
+
+.bar
 
 table {
     width: 100%;
