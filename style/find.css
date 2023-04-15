@@ -16,6 +16,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
+    vertical-align: middle;
     transform: translate(25%, 25%);
     white-space : nowrap;
 }
@@ -43,9 +44,18 @@ body {
 }
 
 .searchbtn {
-    position: relative;
-    margin: 0;
+    position: absolute;
     z-index: 1;
+    background: transparent;
+    border: none;
+    
+    left: 49%;
+    transform: translate(-100%, 60%);
+}
+
+.svgset {
+    width: 42px;
+    opacity: 0.5;
 }
 
 table {
