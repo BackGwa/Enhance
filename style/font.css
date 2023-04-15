@@ -1,0 +1,66 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css");
+
+
+.fontP {
+    font-family: "Pretendard Variable";
+}
+
+.colorW {
+    color: #F5F5F5;
+}
+
+.colorB {
+    color: #000;
+}
+
+.w100 {
+    font-weight: 100;
+}
+
+.w300 {
+    font-weight: 300;
+}
+
+.w400 {
+    font-weight: 400;
+}
+
+.w600 {
+    font-weight: 600;
+}
+
+.w700 {
+    font-weight: 700;
+}
+
+.w900 {
+    font-weight: 900;
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+.f24 {
+    font-size: 24px;
+}
+
+.f28 {
+    font-size: 28px;
+}
+
+.f32 {
+    font-size: 32px;
+}
+
+.f36 {
+    font-size: 36px;
+}
+
+.f48 {
+    font-size: 48px;
+}
