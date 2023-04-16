@@ -38,7 +38,7 @@ function showlist(data){
     let listchild = document.createElement('table');
 
     listchild.innerHTML = `
-        <thead onclick="sendinfo(${data[2]});">
+        <thead onclick="sendinfo('${data[0]}', ${data[2]});">
             <tr class='fontP colorW w700 f24'>
                 <td>${data[0]}</td>
             </tr>
@@ -52,6 +52,6 @@ function showlist(data){
 
 
 // Send selected school information
-function sendinfo(code){
-    location.href=`./enhance.html?school=${code}`;
+function sendinfo(name, code){
+    location.href=`./enhance.html?name=${name}&code=${code}`;
 }
