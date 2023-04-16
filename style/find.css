@@ -74,6 +74,13 @@ body {
     opacity: 0.75;
 }
 
+.tablestyle {
+    position: relative;
+    display: grid;
+    width: 50%;
+    top: 15%;
+}
+
 table {
     width: 100%;
     border: 1px solid #000000;
