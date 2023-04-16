@@ -37,17 +37,15 @@ function showlist(data){
     let listchild = document.createElement('table')
 
     listchild.innerHTML = `
-        <thead>
+        <thead onclick="sendinfo(${data[2]});">
             <tr class='fontP colorW w700 f24'>
                 <td>${data[0]}</td>
-                <td rowspan="3" align="right"><button class="selectbtn" onclick="sendinfo(${data[2]})">선택하기</button></td>
             </tr>
             <tr class='fontP colorW w300 f15'>
                 <td>${data[1]}</td>
             </tr>
         </thead>
     `;
-    
     listbox.appendChild(listchild);
 }
 
