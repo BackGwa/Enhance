@@ -54,8 +54,3 @@ function showlist(data){
 function sendinfo(code){
     location.href=`./enhance.html?school=${code}`;
 }
-
-
-// Register EventListener
-const search = document.getElementById('find');
-search.addEventListener('click', findschool);
