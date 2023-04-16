@@ -4,6 +4,7 @@ const APIKey = secret.key;
 const SCNM = '중학교';
 const listbox = document.getElementById('schoollist');
 
+
 // School Find API Request
 function findschool(){
     const schoolname = document.getElementById('schoolname').value;
