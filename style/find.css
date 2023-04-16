@@ -89,6 +89,10 @@ body {
     border-radius: 15px;
 }
 
+.blendmix {
+    mix-blend-mode: screen;
+}
+
 table {
     padding: 24px;
     width: 100%;
