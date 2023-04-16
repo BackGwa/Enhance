@@ -8,3 +8,8 @@ body {
     backdrop-filter: blur(64px);
     -webkit-backdrop-filter: blur(64px);
 }
+
+.schoolname {
+    text-align: center;
+    padding-top: 24px;
+}

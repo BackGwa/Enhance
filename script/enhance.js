@@ -12,6 +12,17 @@ function paser(){
     return params;
 }
 
+var pag = paser();
+const schoolname = pag["name"];
+const schoolcode  = pag["code"];
+
+
+// s
+function setschool(){
+    const title = document.getElementById('schoolname');
+    title.innerHTML = decodeURIComponent(schoolname);
+}
+
 
 // Create local storage with school code
 function createStorage(key, value){
@@ -19,3 +30,5 @@ function createStorage(key, value){
         localStorage.setItem(key, value);
     }
 }
+
+setschool();

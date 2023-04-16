@@ -29,7 +29,7 @@ function getlist(data){
     }
     data.forEach(i => {
         showlist([i.SCHUL_NM, i.ORG_RDNMA, i.SD_SCHUL_CODE])
-    });
+    }); 
 }
 
 
