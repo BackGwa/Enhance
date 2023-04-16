@@ -1,0 +1,10 @@
+body {
+    background: linear-gradient(to bottom right, #101B27 ,#101B34);
+}
+
+.mainpage {
+    height: 100vh;
+    background-color: #181a1dBF;
+    backdrop-filter: blur(64px);
+    -webkit-backdrop-filter: blur(64px);
+}
