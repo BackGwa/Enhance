@@ -56,7 +56,6 @@ body {
     z-index: 1;
     background: transparent;
     border: none;
-    
     left: 49%;
     transform: translate(-100%, 60%);
 }
@@ -74,14 +73,15 @@ body {
 }
 
 .list {
-    width: 100%;
+    width: 50%;
     height: 75%;
     overflow: scroll;
+    border-radius: 15px;
 }
 
 .tablestyle {
     position: relative;
-    width: 50%;
+    width: 100%;
     top: 17%;
     z-index: 0;
     background-color: #00000094;
@@ -94,7 +94,7 @@ table {
     width: 100%;
     background-color: #00000000;
     border-radius: 15px;
-    transition: .3s;
+    transition: .3s ease-in-out;
 }
 
 table:hover{

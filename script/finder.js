@@ -35,7 +35,7 @@ function getlist(data){
 
 // Insert list in HTML
 function showlist(data){
-    let listchild = document.createElement('table')
+    let listchild = document.createElement('table');
 
     listchild.innerHTML = `
         <thead onclick="sendinfo(${data[2]});">
