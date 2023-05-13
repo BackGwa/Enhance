@@ -1,5 +1,15 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css");
 
+@font-face {
+    font-family: 'ClimateCrisisKR-1979';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/ClimateCrisisKR-1979.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+.fontC {
+    font-family: "ClimateCrisisKR-1979";
+}
 
 .fontP {
     font-family: "Pretendard Variable";
@@ -35,6 +45,10 @@
 
 .w900 {
     font-weight: 900;
+}
+
+.f8 {
+    font-size: 8px;
 }
 
 .f12 {
