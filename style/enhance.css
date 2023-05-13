@@ -13,3 +13,16 @@ body {
     text-align: center;
     padding-top: 24px;
 }
+
+#item {
+    text-align: center;
+}
+
+#item img {
+    margin-top: 50px;
+    width: 50px;
+}
+
+#item #itemname {
+    margin-top: 12px;
+}
