@@ -47,6 +47,10 @@
     font-weight: 900;
 }
 
+.f5 {
+    font-size: 5px;
+}
+
 .f8 {
     font-size: 8px;
 }
@@ -81,4 +85,17 @@
 
 .f48 {
     font-size: 48px;
+}
+
+.f56 {
+    font-size: 56px;
+}
+
+.f64 {
+    font-size: 64px;
+}
+
+.rmdeco {
+    text-decoration: none;
+    color: #FFF;
 }

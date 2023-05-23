@@ -10,7 +10,7 @@
     <link rel="icon" href="./image/favicon.png" type="image/x-icon">
 
     <script src="./script/API.js"></script>
-    
+
     <link rel="stylesheet" href="./style/base.css">
     <link rel="stylesheet" href="./style/find.css">
     <link rel="stylesheet" href="./style/font.css">
@@ -21,7 +21,8 @@
         <div class="logo blendmix"><img src="./image/KSchoolWar.png" class="logoimg"></div>
         <div class="search fontP colorW">
             <div class="bar">
-                <input type="search" id="schoolname" placeholder="학교 검색..." class="w400 f36 inputbar colorW">
+                <input type="search" id="schoolname" placeholder="학교 검색..." class="w400 f36 inputbar colorW"
+                    onkeypress="if(window.event.keyCode == 13){findschool();}">
                 <button onclick="findschool();" class="searchbtn"><img src="./image/search.svg" class="svgset"></button>
             </div>
             <div class="list">
@@ -29,7 +30,7 @@
             </div>
         </div>
     </div>
-
+    
     <script src="./script/finder.js"></script>
 </body>
 

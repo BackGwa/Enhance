@@ -32,27 +32,100 @@ body {
     position: relative;
     text-align: center;
     background: #292a30A0;
-    border-radius: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
+    border-radius: 10px;
+    margin-left: 48px;
+    margin-right: 48px;
+
+    filter: drop-shadow(0px 0px 12px #ffffff1F);
+    border: solid 0.5px #FFFFFF0E;
 }
 
 #item img {
-    padding-top: 25px;
-    width: 64px;
+    padding-top: 100px;
+    height: 300px;
+    filter: drop-shadow(0 0 24px #FFFFFF49);
 }
 
 #item #itemname {
-    margin-top: 12px;
-    padding-bottom: 25px;
+    margin-top: 32px;
+    padding-bottom: 8px;
+}
+
+#persent {
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 50px;
 }
 
 .logo {
-    margin-left: 15px;
-    margin-top: 15px;
-    padding-bottom: 24px;
+    margin-left: 48px;
+    margin-top: 48px;
+    padding-bottom: 48px;
 }
 
 .smalllogotext {
-    margin-top: -4px;
+    margin-top: -15px;
+}
+
+.gobutton {
+    width: 100%;
+    height: 128px;
+    margin: 12px 5px 10px 0;
+    padding: 3px 18px;
+    border-radius: 8px;
+    background: #6ee9ab;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 1px #FFFFFF4F;
+
+    filter: drop-shadow(0px 0px 24px #6ee9abA0);
+    transition: 0.25s;
+}
+
+.gobutton:hover {
+    background: #64d59c;
+    width: 250%;
+}
+
+.stopbutton:hover {
+    background: #e16262;
+    width: 250%;
+}
+
+.stopbutton {
+    width: 100%;
+    height: 128px;
+    margin: 12px 0 10px 5px;
+    padding: 3px 18px;
+    border-radius: 8px;
+    background: #f96e6e;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 1px #FFFFFF4F;
+
+    filter: drop-shadow(0px 0px 24px #f96e6eA0);
+    transition: 0.25s;
+}
+
+.flexbox {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    position: relative;
+    text-align: center;
+    margin-left: 48px;
+    margin-right: 48px;
+}
+
+.hiddenform {
+    display: none;
 }

@@ -6,35 +6,39 @@ const listbox = document.getElementById('schoollist');
 
 
 // School Find API Request
-function findschool(){
+function findschool() {
     const schoolname = document.getElementById('schoolname').value;
-    if((schoolname != '') && (!schoolname.includes(' '))){
+    if ((schoolname != '') && (!schoolname.includes(' '))) {
         const APILink = `https://open.neis.go.kr/hub/schoolInfo?Type=json&KEY=${APIKey}&SCHUL_KND_SC_NM=${SCNM}&SCHUL_NM=${schoolname}`;
 
         fetch(APILink)
-        .then(
-            (response) => response.json()
-        )
-        .then(
-            (data) => getlist(data.schoolInfo[1].row)
-        );
+            .then(
+                (response) => response.json()
+            )
+            .then(
+                (data) => getlist(data.schoolInfo[1].row)
+            );
     }
 }
 
 
 // Listed schools found
-function getlist(data){
-    while(listbox.firstChild) {
-        listbox.removeChild(listbox.firstChild);
+function getlist(data) {
+    try {
+        while (listbox.firstChild) {
+            listbox.removeChild(listbox.firstChild);
+        }
+    } catch {
+
     }
     data.forEach(i => {
         showlist([i.SCHUL_NM, i.ORG_RDNMA, i.SD_SCHUL_CODE])
-    }); 
+    });
 }
 
 
 // Insert list in HTML
-function showlist(data){
+function showlist(data) {
     let listchild = document.createElement('table');
 
     listchild.innerHTML = `
@@ -47,11 +51,12 @@ function showlist(data){
             </tr>
         </thead>
     `;
+
     listbox.appendChild(listchild);
 }
 
 
 // Send selected school information
-function sendinfo(name, code){
-    location.href=`./enhance.html?name=${name}&code=${code}`;
+function sendinfo(name, code) {
+    location.href = `enhance.php?name=${name}&code=${code}`;
 }
