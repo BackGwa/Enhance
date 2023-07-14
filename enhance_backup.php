@@ -9,12 +9,10 @@
     <link rel="icon" href="./image/favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./style/base.css">
-    <link rel="stylesheet" href="./style/enhance.css">
+    <link rel="stylesheet" href="./style/enhance_backup.css">
     <link rel="stylesheet" href="./style/font.css">
 </head>
 <body>
-    <audio src="./sound/hover.mp3" id="hovers"></audio>
-
     <div class="mainpage">
 
         <!-- side left page -->
@@ -38,8 +36,7 @@
 
             <form action="./PROCESSING.php" method="post">
                 <div class="flexbox btn">
-                    <input id="gobtn" class="gobutton fontC colorW f56" type="button" value="고!" 
-                            onclick="hoversound(); randomgo();">
+                    <input class="gobutton fontC colorW f56" type="button" value="고!" onclick="randomgo();">
                     <?php
                         $code = $_GET['code'];
                         echo '<input class="hiddenform" type="text" name="school_code" value="'.$code.'">';
@@ -49,17 +46,16 @@
                         echo '<input class="hiddenform" type="text" name="school_name" value="'.$code.'">';
                     ?>
                     <input class="hiddenform" type="text" name="score" id="scorename" value="250">
-                    <input class="stopbutton fontC colorW f56" type="submit" value="스탑!"
-                        onclick="hoversound();">
+                    <input class="stopbutton fontC colorW f56" type="submit" value="스탑!">
                 </div>
             </form>
         </div>
 
         <!-- side right page -->
         <div class="rightpage">
-            <div class="ranktitle">
+            <div class="logo">
                 <div class="biglogotext">
-                    <div class="fontC colorW f36">현재 랭킹</div>
+                    <div class="fontC colorW f56">현재 랭킹</div>
                 </div>
             </div>
             <!-- 랭크 박스 -->
@@ -91,6 +87,5 @@
 
     </div>
     <script src="./script/enhance.js"></script>
-    <script src="./script/sound.js"></script>
 </body>
 </html>

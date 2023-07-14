@@ -52,10 +52,10 @@
     ?>
 
 
-        <div class="centertext colorW fontP f64 w700">
+        <div class="fulltext centertext colorW fontP f64 w700">
             랭킹에 등록되었습니다. 
-            <br><div class="f36 w400">데스크에서 상품을 수령해주세요.</div>
-            <br><div class="f24 w300">스코어 : <?php echo $_POST['score'];?></div>
+            <br><div class="fulltext f36 w400">데스크에서 상품을 수령해주세요.</div>
+            <br><div class="fulltext f24 w300">스코어 : <?php echo $_POST['score'];?></div>
             <br><a class="f24 rmdeco" href="./index.html">뒤로가기</a>
         </div>
     </div>

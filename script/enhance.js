@@ -38,11 +38,10 @@ let randper = 80;
 let randint = 0;
 
 const randlist = [
-    ['./image/item/item1.png', '상품1', 250],
-    ['./image/item/item1.png', '상품2', 500],
-    ['./image/item/item1.png', '상품3', 750],
-    ['./image/item/item1.png', '상품4', 1000],
-    ['./image/item/item1.png', '상품5', 1500]
+    ['./image/item/item5.png', '꽝', 500],
+    ['./image/item/item2.png', '+ 츄파춥스', 1000],
+    ['./image/item/item3.webp', '+ 트윅스', 1500],
+    ['./image/item/item4.png', '+ 크런키', 2500]
 ]
 
 function randomgo(){
@@ -50,26 +49,33 @@ function randomgo(){
 
     // 확률은 처음 80%
 
-    // 성공 시 확률은 (((15.127 / (등급 * 1.417)) - (0.24 * 등급)) + 3.1)% 감소 됨
-    // 1번째 등급은 (((15.127 / 1 * 1.417) - (0.24 * 1)) + 3.1)이라 13.53% 감소 됨
-    // 2번째 등급은 (((15.127 / 2 * 1.417) - (0.24 * 2)) + 3.1)이라 7.95% 감소 됨
+    // 성공 시 확률은 (((15.137 / (등급 * 1.427)) - (0.236 * 등급)) + 2.97) + 등급 * 2.4% 감소 됨
+    // 1번째 등급은 9.394% 감소 됨
 
-    // 그 이후 확률은 2.5% 이하로 작아지지 않음
-    // 2.5% 이하가 반복될 경우 랜덤하게 2.5 ~ 5%까지 확률 상승이 가능
+    // 그 이후 확률은 4% 이하로 작아지지 않음
+    // 4% 이하가 반복될 경우 랜덤하게 4 ~ 8%까지 확률 상승이 가능
 
     // 실패 시에는 첫 번째 아이템으로 이동
     // 확률은 절대 복귀되지 않음
 
-    if(randint != 4){
+    if(randint != 3){
         if(randvalue <= randper){
-        randper -= (((15.127 / ((randint + 1) * 1.417)).toFixed(2) - 0.24) + 3.1);
-        randint += 1;
+            randper -= (((15.137 / ((randint + 1) * 1.427)).toFixed(2) - 0.236) + 2.97) + randint * 2.4;
+            randint += 1;
+            document.getElementById('gobtn').value = '성공!';
+            setTimeout(() => {
+                document.getElementById('gobtn').value = '고!';
+            }, 500);
         } else {
             randint = 0;
+            document.getElementById('gobtn').value = '실패!';
+            setTimeout(() => {
+                document.getElementById('gobtn').value = '고!';
+            }, 500);
         }
 
-        if(randper <= 2.5){
-            randper = rand(2.5, 5);
+        if(randper <= 4){
+            randper = rand(4, 8);
         }
 
         setbase(randlist[randint][0], randlist[randint][1]);
@@ -77,7 +83,7 @@ function randomgo(){
         document.getElementById("scorename").value = randlist[randint][2];
         persent();
     } else {
-        alert('이미 최고 등급 입니다!');
+        alert('이미 최고 등급에 도달하였습니다!');
     }
 }
 
@@ -92,4 +98,4 @@ function persent(){
 
 setschool();
 persent();
-setbase('./image/item/item1.png', '상품1');
+setbase('./image/item/item5.png', '꽝');

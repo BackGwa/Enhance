@@ -1,24 +1,26 @@
 body {
-    background: #161a21;
+    background: linear-gradient(to bottom right, #101B27 ,#101B34);
 }
 
 .mainpage {
     height: 100vh;
-    background-color: #161a21;
+    background-color: #181a1dBF;
     backdrop-filter: blur(64px);
     -webkit-backdrop-filter: blur(64px);
 }
 
 .leftpage {
     position: relative;
-    width: 100%;
-    height: 50%;
+    width: 50%;
+    height: 100%;
+    float: left;
 }
 
 .rightpage {
     position: relative;
-    width: 100%;
-    height: 50%;
+    width: 50%;
+    height: 100%;
+    float: right;
 }
 
 .schoolname {
@@ -61,12 +63,6 @@ body {
     padding-bottom: 48px;
 }
 
-.ranktitle {
-    margin-left: 48px;
-    margin-top: 182px;
-    padding-bottom: 24px;
-}
-
 .smalllogotext {
     margin-top: -15px;
 }
@@ -78,7 +74,7 @@ body {
     padding: 3px 18px;
     border-radius: 8px;
     background: #6ee9ab;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,30 +87,22 @@ body {
 
 .gobutton:hover {
     background: #64d59c;
-    color: #f8f8f8;
-    font-size: 64px;
-    width: 180%;
+    width: 200%;
 }
 
 .gobutton:active {
     background: #51ab7e;
-    color: #e1e1e1;
-    font-size: 82px;
-    width: 300%;
+    width: 260%;
 }
 
 .stopbutton:hover {
     background: #e16262;
-    color: #f8f8f8;
-    font-size: 64px;
-    width: 180%;
+    width: 200%;
 }
 
 .stopbutton:active {
     background: #ba5252;
-    color: #e1e1e1;
-    font-size: 82px;
-    width: 300%;
+    width: 260%;
 }
 
 .stopbutton {
@@ -136,7 +124,7 @@ body {
 }
 
 .flexbox {
-    margin-top: 16px;
+    margin-top: 12px;
     display: flex;
     justify-content: space-between;
 }
@@ -154,8 +142,8 @@ body {
 
 .rankbox {
     margin-left: 48px;
-    width: 90%;
-    height: 400px;
+    width: 85%;
+    height: 750px;
     overflow-x: hidden;
     overflow-y: scroll;
     filter: drop-shadow(0px 0px 12px #ffffff1F);
@@ -183,13 +171,4 @@ body {
 
 .rankscore {
     margin-right: 18px;
-}
-
-.onlyranklist {
-    margin: 48px;
-    width: 90%;
-    height: 90%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    filter: drop-shadow(0px 0px 12px #ffffff1F);
 }
